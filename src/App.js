@@ -1,15 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar.js';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <>
     <Navbar></Navbar>
-    <div> CURSO REACT MARCOS SCALABRINO </div>
+    <ItemListContainer greeting="CURSO REACT MARCOS SCALABRINO"  />
     </>
   );
 }
 
-export default App;
+export default App; 

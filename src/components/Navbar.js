@@ -1,3 +1,5 @@
+import CartWidget from './CartWidget';
+
 const Navbar = () => {
     return (
         <nav className="App navbar navbar-expand-lg navbar-light bg-light">
@@ -7,13 +9,14 @@ const Navbar = () => {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
-                    <a className="nav-link" href="#">Products</a>
-                    <a className="nav-link" href="#">Pricing</a>
-                    {/* <a className="nav-link disabled">Disabled</a> */}
+                    <div className="navbar-nav">
+                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        <a className="nav-link" href="#">Products</a>
+                        <a className="nav-link" href="#">Pricing</a>
+                        {/* <a className="nav-link disabled">Disabled</a> */}
+                    </div>
                 </div>
-                </div>
+                <a className="nav-link align-right" href="#"><CartWidget  /></a>
             </div>
         </nav>
     )
