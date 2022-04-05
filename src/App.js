@@ -1,15 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar.js';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer.js';
 
 function App() {
   return (
     <>
     <Navbar></Navbar>
-    <ItemListContainer greeting="CURSO REACT MARCOS SCALABRINO"  />
+    <ItemListContainer/>
     </>
   );
 }
 
-export default App; 
+export default App;
