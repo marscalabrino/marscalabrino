@@ -2,7 +2,7 @@ import {useState}  from "react";
 
 function ItemCount({ stock, initial,  onAdd }) {
     // Desarrollar lógica
-    var stock = 5; //maximo compra
+    var stock; //maximo compra
     var initial = 1; //minimo compra
     const [rate, setRate] = useState(initial); //estado cantidad
     
@@ -23,11 +23,11 @@ function ItemCount({ stock, initial,  onAdd }) {
     
     return (
     <>
-    <div className="d-flex justify-content-around mt-auto">
-        <button type="button" className="btn btn-primary" onClick={decrement}>-</button>
-        <p className="fs-3 value-rate">{rate}</p>
-        <button type="button" className="btn btn-primary" onClick={increment}>+</button>
-        <button type="button" className="btn btn-primary" onClick={onAdd}>ADD TO CART</button>
+    <div className="d-flex flex-wrap m-auto btn-group col-8">
+        <button type="button" className="btn btn-primary p-0" onClick={decrement}>-</button>
+        <button className="btn btn-primary p-0">{rate}</button>
+        <button type="button" className="btn btn-primary p-0" onClick={increment}>+</button>
+        <button type="button" className="btn btn-primary p-0" onClick={onAdd}>ADD TO CART</button>
     </div>    
     </>
     )
