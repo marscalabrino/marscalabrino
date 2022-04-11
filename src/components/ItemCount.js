@@ -3,13 +3,14 @@ import {useState}  from "react";
 function ItemCount({ stock, initial,  onAdd }) {
     // Desarrollar lógica
     var stock; //maximo compra
-    var initial = 1; //minimo compra
+    var initial; //minimo compra
     const [rate, setRate] = useState(initial); //estado cantidad
-    
-    var onAdd = () => {
+        
+    var onAdd = (rate) => {
         if (rate > 0 && stock > 0)
         alert("Se han agregado " + rate + " items al carrito.");
     }
+
     const increment = () => {
         if (rate < stock) {
             setRate(rate+1)
