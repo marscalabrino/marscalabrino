@@ -19,7 +19,7 @@ const Item = ({ id, title, stock, price, picture }) => {
                         <p className="detalles-producto m-0 col-6">$ {price}</p>
                         <p className="detalles-producto m-0 text-end col-6">Quedan {stock} unid.</p>
                     </div>
-                    <ItemCount   stock={stock} initial={1} /* onAdd={} */  />
+                    <ItemCount   stock={stock} initial={1}   />
            </div>
         </div>
 );

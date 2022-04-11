@@ -5,12 +5,11 @@ function ItemCount({ stock, initial,  onAdd }) {
     var stock; //maximo compra
     var initial; //minimo compra
     const [rate, setRate] = useState(initial); //estado cantidad
-        
-    var onAdd = (rate) => {
+    
+    var onAdd = () => {
         if (rate > 0 && stock > 0)
         alert("Se han agregado " + rate + " items al carrito.");
     }
-
     const increment = () => {
         if (rate < stock) {
             setRate(rate+1)
