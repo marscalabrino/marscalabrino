@@ -2,10 +2,10 @@ import ItemCount  from "./ItemCount";
 
 const Item = ({ id, title, stock, price, picture }) => {
     
-    /* var onAdd = (a) => {
-        if (a > 0 && stock > 0)
-        alert("Se han agregado " + a + " items al carrito.");
-    } */
+    const onAdd = (cantidad) => {
+        if (cantidad > 0 && stock > 0)
+        alert("Se han agregado " + cantidad + " items al carrito.");
+    }
     return (
         /* DETALLES DE PRODUCTO */
         <div className="contenedor-producto col-4 p-3 bg-light rounded">
@@ -19,10 +19,10 @@ const Item = ({ id, title, stock, price, picture }) => {
                         <p className="detalles-producto m-0 col-6">$ {price}</p>
                         <p className="detalles-producto m-0 text-end col-6">Quedan {stock} unid.</p>
                     </div>
-                    <ItemCount   stock={stock} initial={1}   />
+                    <ItemCount   stock={stock} initial={1} onAdd={onAdd}   />
            </div>
         </div>
-);
+    );
 }
 
 export default Item;
