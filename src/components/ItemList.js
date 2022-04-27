@@ -1,7 +1,7 @@
 import Item from "./Item";
 
 export default function ItemList({productos}) {
-    console.log(productos, "Estoy en itemlist");
+    
     return (
         /* CONTENEDOR CADA PRODUCTO */
         <>

@@ -12,6 +12,7 @@ export const products = [
     cost: 140,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
     weight: 1500,
+    category: 1,
     image: [stone_01]
   },/* https://www.reino-minerales.es/wp-content/uploads/2015/03/pierre-cristal-de-roche-700x480.jpg */
   {
@@ -21,6 +22,7 @@ export const products = [
       cost: 160,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
       weight: 1100,
+      category: 1,
       image:  [stone_02]
       /* "https://http2.mlstatic.com/D_NQ_NP_858663-MLM44641590923_012021-O.jpg" */
     },
@@ -31,6 +33,7 @@ export const products = [
       cost: 120,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
       weight: 1100,
+      category: 1,
       image: [stone_03]
       /* "https://http2.mlstatic.com/D_NQ_NP_957385-MLM49262505294_032022-W.jpg" */
     },
@@ -41,6 +44,7 @@ export const products = [
       cost: 120,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
       weight: 1100,
+      category: 3,
       image:[stone_04]
        /* "https://m.media-amazon.com/images/I/91x6ME2zzZL._AC_SX425_.jpg" */
     },
@@ -51,6 +55,7 @@ export const products = [
       cost: 170,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
       weight: 1700,
+      category: 2,
       image: [stone_05]
       /* "https://cdn.doers.video/embed/080eccbfdd55a756e9a4ea36451a61526401840/5723adeb60a0e.jpg" */
     },
@@ -70,4 +75,3 @@ export const getData = (time, task) => {
     }, time);
   })
 }
-

@@ -3,24 +3,24 @@ import { useEffect, useState } from "react";
 import { getData } from '../utils/products';
 import ItemCount from './ItemCount';
 import { products }  from "../utils/products";
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
-    
-    //LLAMAR AL FETCH 
     const [datos, setDatos] = useState([]);
+    const { id } = useParams();
 
-    /* useEffect(() => {
-        async function pedirData() {
-            let productos = await getData()
-            setDatos(productos)
-        }
-        pedirData()
-    },[]) */
     useEffect(() => {
-            getData(2000, products)
+            if (id == undefined) {
+                getData(2000, products)
                 .then(result => setDatos(result))
                 .catch(err => console.log(err))
-        }, []);
+            } else {
+                getData(2000, products.filter(item => item.category === parseInt(id)))
+                .then(result => setDatos(result))
+                .catch(err => console.log(err))
+            }
+            console.log(id);
+        }, [id]);
 
      return (
          <>

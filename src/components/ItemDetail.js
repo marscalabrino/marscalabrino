@@ -9,8 +9,11 @@ const ItemDetail = ({item}) => {
             item
             ?
             <div>
-                <p>Cargooo</p>
-                <p>{item.name}</p>
+                <h1>{item.name}</h1>
+                <img src={item.image}   />
+                <p>{item.stock}</p>
+                <p>{item.cost}</p>
+                <p>{item.description}</p>
             </div>
             : <p> cargandoo...</p>
         }

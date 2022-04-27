@@ -1,16 +1,11 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar.js';
-import ItemListContainer from './components/ItemListContainer.js';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import Home from './Home';
 
 function App() {
   return (
-    <>
-    <Navbar></Navbar>
-    <ItemListContainer   />
-    {/* <ItemDetailContainer   /> */}
-    </>
+      <Home  />
   );
 }
 
