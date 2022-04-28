@@ -1,11 +1,7 @@
-import ItemCount  from "./ItemCount";
+import { Link } from "react-router-dom";
 
 const Item = ({ id, title, stock, price, picture }) => {
     
-    const onAdd = (cantidad) => {
-        if (cantidad > 0 && stock > 0)
-        alert("Se han agregado " + cantidad + " items al carrito.");
-    }
     return (
         /* DETALLES DE PRODUCTO */
         <div className="contenedor-producto col-4 p-3 bg-light rounded">
@@ -19,7 +15,8 @@ const Item = ({ id, title, stock, price, picture }) => {
                         <p className="detalles-producto m-0 col-6">$ {price}</p>
                         <p className="detalles-producto m-0 text-end col-6">Quedan {stock} unid.</p>
                     </div>
-                    <ItemCount   stock={stock} initial={1} onAdd={onAdd}   />
+                    <Link to={`/item/${id}`}><button type="button" className="btn btn-primary">Detalles</button></Link>
+
            </div>
         </div>
     );

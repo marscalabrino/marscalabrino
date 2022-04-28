@@ -1,7 +1,6 @@
 import ItemList from './ItemList';
 import { useEffect, useState } from "react";
 import { getData } from '../utils/products';
-import ItemCount from './ItemCount';
 import { products }  from "../utils/products";
 import { useParams } from 'react-router-dom';
 

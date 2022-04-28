@@ -23,7 +23,7 @@ const Navbar = () => {
                     <Link to='/category/3'><a className="nav-link" href="#">CATEGORIA 3</a></Link>
                     </div>
                 </div>
-                <a className="nav-link align-right" href="#"><CartWidget  /></a>
+                <Link to='/cart'><a className="nav-link align-right" href="#"><CartWidget  /></a></Link>
             </div>
         </nav>
     )
