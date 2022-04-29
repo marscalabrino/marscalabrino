@@ -3,6 +3,14 @@
     position: relative;
 }
 
+.img-cart {
+  height: 220px;
+}
+
+.contenedor-totales{
+  height: 400px;
+}
+
 
 /* POSICIONES ESTILO BOOTSTRAP */
 /* Bottom left text */
