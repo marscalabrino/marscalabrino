@@ -37,6 +37,13 @@ export default function Cart() {
                         <p className="detalles-producto">{item.qtyItem} unidades.</p>
                         <button type="button" className="btn btn-primary p-0" onClick={() => {test.removeItem(item.id)}} >Delete</button>
                     </div>
+                    <div className="contenedor-totales col-6 d-flex flex-column justify-content-center">
+                        <h1 className="text-center fs-4">Totales de compra</h1>
+                        <p className="text-center">El subtotal es: ${test.sumCost()} </p>
+                        <p className="text-center">Impuestos de 23%: ${calcImpuesto()}</p>
+                        <p className="text-center">Total: ${calcTotal()}</p>
+                        <button className=" col-4 btn btn-primary align-self-center">Finalizar compra</button>
+                    </div>
                 </div>  
              )
             }        
@@ -46,13 +53,7 @@ export default function Cart() {
                 <p>No hay productos en el carrito.</p>
             </div>
         }
-            <div className="contenedor-totales col-6 d-flex flex-column justify-content-center">
-                <h1 className="text-center fs-4">Totales de compra</h1>
-                <p className="text-center">El subtotal es: ${test.sumCost()} </p>
-                <p className="text-center">Impuestos de 23%: ${calcImpuesto()}</p>
-                <p className="text-center">Total: ${calcTotal()}</p>
-                <button className=" col-4 btn btn-primary align-self-center">Finalizar compra</button>
-            </div>
+            
         </div>
         </>
     )
