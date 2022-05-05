@@ -11,7 +11,7 @@ export default function Cart() {
     const checkout = () => {
         const itemForDB = test.cartList.map(item => ({
             id: item.id,
-            title:item.title,
+            title: item.name,
             price: item.cost
         }))
 
@@ -30,7 +30,7 @@ export default function Cart() {
             },
             date: serverTimestamp(),
             items:itemForDB,
-            total: test.calcTotal()
+            total: test.sumCost()
         }
         console.log(order);
 
@@ -44,7 +44,7 @@ export default function Cart() {
             .then(result => alert('Tu orden fue creada!'))
             .catch(err => console.log(err))
 
-        test.removeList();
+        test.clear();
     }
 
     
