@@ -9,7 +9,6 @@ const ItemDetailContainer = () => {
     const [dato, setDatos] = useState({});
     const { id } = useParams();
     
-    
     useEffect(() => {
         const fetchSingleItem = async () => {
             const docSnap = await getDoc(doc(db, "products", id));
@@ -24,7 +23,7 @@ const ItemDetailContainer = () => {
         fetchSingleItem()
             .then(result => setDatos(result))
             .catch(err => console.log(err))
-    }, [dato]);
+    }, []);
 
     return (
         <ItemDetail  item={dato}  />

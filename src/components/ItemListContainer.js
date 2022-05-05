@@ -3,31 +3,37 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import db from '../utils/firebaseConfig';
 import { getDocs, collection, doc } from 'firebase/firestore';
-/* import { getData, products } from '../utils/products'; */
+import { query, where } from "firebase/firestore";
+
 
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
-    const { id } = useParams();
-
-  /*   useEffect(() => {
-        getData(2000, products.find(item => item.id === parseInt(id)))
-            .then(result => setDatos(result))
-            .catch(err => console.log(err))
-    }, []); */
+    const { idCategory } = useParams();
     
     useEffect(() => {
-        const fetchFireStore = async () => {
-            const querySnapshot = await getDocs(collection(db, "products"));
-            const dataFireStore = querySnapshot.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data()
+        const fetchFireStore = async (idCategory) => {
+            let c;
+            
+            if (idCategory) {
+                c = query(collection(db, "products"), where('category', '==', parseInt(idCategory)));
+                console.log("true " + idCategory );
+            } else {
+                c = query(collection(db, "products"));
+                console.log("false");
+            }
+        
+            const querySnapshot = await getDocs(c);
+            const dataFireStore = querySnapshot.docs.map((document) => ({
+                id: document.id,
+                ...document.data()
             }));
             return dataFireStore;
-        }
-        fetchFireStore()
-            .then(result => setDatos(result))
-            .catch(err => console.log(err))
-    }, [datos]);
+            }
+            fetchFireStore(idCategory)
+                .then(result => setDatos(result))
+                .catch(err => console.log(err))
+        }, [idCategory]);
+    
    
      return (
          <>
