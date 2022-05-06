@@ -9,7 +9,7 @@ const CartContextProvider = ({children}) => {
     const addItem = (item, qty) => {
         console.log(item);
         let isInCart = cartList.find(product => product.id === item.id);
-        if ( isInCart === undefined) {
+        if ( isInCart === undefined && item.stock > 0 ) {
             setCartList([
                 ...cartList,
                 {

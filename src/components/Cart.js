@@ -33,7 +33,7 @@ export default function Cart() {
             total: test.sumCost()
         }
         console.log(order);
-
+        
         const createOrderInFirestore = async () => {
             const newOrderRef = doc(collection(db, "orders"));
             await setDoc(newOrderRef, order);
@@ -41,7 +41,7 @@ export default function Cart() {
         }
         
         createOrderInFirestore()
-            .then(result => alert('Tu orden fue creada!'))
+            .then(result => alert('Tu orden fue creada! ' + result.id ))
             .catch(err => console.log(err))
 
         test.clear();
