@@ -21,7 +21,6 @@ const CartContextProvider = ({children}) => {
                 }
             ]);
         } else {
-            /* isInCart.qtyItem += qty; */
             setqtyTotal(isInCart.qtyItem += qty)
         }
     }

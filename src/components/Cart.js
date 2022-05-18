@@ -33,7 +33,7 @@ export default function Cart() {
             total: test.sumCost()
         }
         console.log(order);
-        
+
         const createOrderInFirestore = async () => {
             const newOrderRef = doc(collection(db, "orders"));
             await setDoc(newOrderRef, order);
@@ -45,9 +45,7 @@ export default function Cart() {
             .catch(err => console.log(err))
 
         test.clear();
-    }
-
-    
+    }   
 
     const calcImpuesto = () => {
         let imp = 0.23;

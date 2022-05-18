@@ -11,7 +11,7 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav centered">
-                    <Link to='/category/1'><a className="nav-link active" aria-current="page" href="#">CATEGORIA 1</a></Link>
+                    <Link to='/category/1'><a className="nav-link" aria-current="page" href="#">CATEGORIA 1</a></Link>
                     <Link to='/category/2'><a className="nav-link" href="#">CATEGORIA 2</a></Link>
                     <Link to='/category/3'><a className="nav-link" href="#">CATEGORIA 3</a></Link>
                     </div>

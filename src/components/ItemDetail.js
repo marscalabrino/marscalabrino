@@ -9,7 +9,6 @@ const ItemDetail = ({item}) => {
 
     const onAdd = (qty) => {
         if (qty > 0 && item.stock > 0)
-        alert("Se han agregado " + qty + " items al carrito.");
         setItemQty(qty);
         test.addItem(item, qty);
     }
